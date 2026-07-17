@@ -1,6 +1,7 @@
 :root {
   --primary-text-color:rgb(57, 57, 57); /* global scope */
   --primary-bg-color:rgb(190, 190, 190); /* global scope */
+  --secondary-bg-color:rgb(143, 143, 143); /* global scope */
 }
 
 
@@ -15,12 +16,12 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("/tysa/img/strahov.jpg");
-    background-color: rgb(143, 143, 143);
+    background-color: var(--secondary-bg-color);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: luminosity;
-    background-position:right;
+    background-position:center;
     overflow: hidden;
     margin: 0 auto;
     width: 100vw;
@@ -43,7 +44,7 @@ body::after {
     opacity: 1;
     mix-blend-mode: lighten;
     z-index: -1;
-    filter: blur(9rem);
+    filter: blur(calc(6vw + 5rem));
 }
 
 main {
@@ -143,7 +144,7 @@ nav a:active {
     width: 2rem;
     height: 2rem;
     object-fit: cover;
-    filter: contrast(0.4) hue-rotate(90deg);
+    filter: contrast(0.4);
     transition: all 0.2s ease-in-out;
 }
 

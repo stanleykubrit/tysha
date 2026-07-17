@@ -15,7 +15,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("img/strahov.jpg");
+    background-image: url("./img/strahov.jpg");
     background-color: var(--secondary-bg-color);
     background-repeat: no-repeat;
     background-attachment: fixed;

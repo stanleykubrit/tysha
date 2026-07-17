@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* C O N T A I N E R Y */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/tysa/img/strahov.jpg");
+    background-color: rgb(143, 143, 143);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-position:right;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* CALC!!!! */
+
+body::after {
+    content:'';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-color: rgb(190, 190, 190);
+    opacity: 1;
+    mix-blend-mode: lighten;
+    z-index: -1;
+    filter: blur(26vw);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    justify-content: center;
+}
+
+
+/* H E A D E R Y */
+
+h1 {
+    color: rgb(27, 26, 26);
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: .7rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0 0 0 .7rem;
+}
+
+h2 {
+    color: rgb(27, 26, 26);
+    font-size: 1.7rem;
+    letter-spacing: 1.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin: .5rem 0 1.9rem 1.7rem;
+    align-self: center;
+}
+
+
+/* E L E M E N T Y */
+   
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.1s ease-in-out;
+
+}
+
+nav a:hover {
+    color: rgb(72, 62, 62);
+    text-decoration: none;
+    font-weight: 100;
+    opacity: 0.9;
+}
+
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#links nav {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+
+}
+
+#socials nav {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+#socials nav img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+
+#socials nav img:hover {
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.6;
+}

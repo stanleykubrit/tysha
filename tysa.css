@@ -1,3 +1,9 @@
+:root {
+  --primary-text-color:rgb(57, 57, 57); /* global scope */
+  --primary-bg-color:rgb(190, 190, 190); /* global scope */
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -33,11 +39,11 @@ body::after {
     left: 0;
     width: 110%;
     height: 110%;
-    background-color: rgb(190, 190, 190);
+    background-color: var(--primary-bg-color);
     opacity: 1;
     mix-blend-mode: lighten;
     z-index: -1;
-    filter: blur(26vw);
+    filter: blur(9rem);
 }
 
 main {
@@ -46,13 +52,14 @@ main {
     align-items: center;
     height: 100%;
     width: 100;
+    margin: calc(1rem + 2vw);
 }
 
 #header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: calc(10vh + 2rem);
     justify-content: center;
 }
 
@@ -60,7 +67,7 @@ main {
 /* H E A D E R Y */
 
 h1 {
-    color: rgb(27, 26, 26);
+    color: var(--primary-text-color);
     font-size: 4rem;
     font-weight: 800;
     letter-spacing: .7rem;
@@ -69,7 +76,7 @@ h1 {
 }
 
 h2 {
-    color: rgb(27, 26, 26);
+    color: var(--primary-text-color);
     font-size: 1.7rem;
     letter-spacing: 1.7rem;
     font-family: 'Cormorant Garamond', serif;
@@ -89,12 +96,18 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(72, 62, 62);
+    color: var(--primary-text-color);
     text-decoration: none;
     font-weight: 100;
     opacity: 0.9;
 }
 
+nav a:active {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: 800;
+    opacity: 0.8;
+}
 
 #socials {
     display: flex;
@@ -130,6 +143,7 @@ nav a:hover {
     width: 2rem;
     height: 2rem;
     object-fit: cover;
+    filter: contrast(0.4) hue-rotate(90deg);
     transition: all 0.2s ease-in-out;
 }
 
@@ -137,4 +151,10 @@ nav a:hover {
     object-fit: cover;
     transition: all 0.2s ease-in-out;
     opacity: 0.6;
+}
+
+#socials nav img:active {
+    object-fit: cover;
+    transition: all 0.1s ease-in-out;
+    opacity: 0.4;
 }

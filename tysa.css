@@ -1,6 +1,6 @@
 :root {
   --primary-text-color:rgb(57, 57, 57); /* global scope */
-  --primary-bg-color:rgb(190, 190, 190); /* global scope */
+  --primary-bg-color:rgb(200, 199, 199); /* global scope */
   --secondary-bg-color:rgb(143, 143, 143); /* global scope */
 }
 
